@@ -1,0 +1,95 @@
+/* navbar */
+.services-expander:hover .services-expand {
+	display: block;
+}
+
+body {
+	background-color: black;
+}
+
+.about-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+}
+
+.about-grid > .div1 {
+	grid-area: 1 / 1 / 4 / 3;
+}
+.about-grid > .div2 {
+	grid-area: 1 / 3 / 2 / 4;
+}
+.about-grid > .div3 {
+	grid-area: 1 / 4 / 2 / 5;
+}
+.about-grid > .div4 {
+	grid-area: 1 / 5 / 2 / 6;
+}
+.about-grid > .div5 {
+	grid-area: 2 / 3 / 4 / 6;
+}
+
+.navbarbg {
+	background-color: black;
+	/* background: rgba(0, 0, 0, 0.651);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px); */
+}
+
+.active {
+	color: orange;
+}
+/* PortfolioShowcase.css */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in {
+	animation: fadeIn 0.6s ease-out forwards; /* Ensure the final state of the animation is applied */
+}
+
+.animate-on-scroll {
+	opacity: 0; /* Initially hidden */
+	transition: opacity 0.3s ease; /* Smooth transition for appearance */
+}
+
+.image-container {
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.5s ease-in-out;
+}
+
+.image-container img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.image-container:hover .description {
+	opacity: 1;
+}
+
+.description {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	padding: 1rem;
+	text-align: center;
+}
